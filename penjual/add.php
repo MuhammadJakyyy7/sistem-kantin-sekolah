@@ -40,7 +40,7 @@
         include_once("config.php");
                 
         // Insert user data into table
-        $result = mysqli_query($mysqli, "INSERT INTO penjual(No_Telp,email,mobile) VALUES('$name','$email','$mobile')");
+        $result = mysqli_query($mysqli, "INSERT INTO penjual(id_penjual,nama,alamat,) VALUES('$id','$nama','$alamat')");
         
         // Show message when user added
         echo "User added successfully. <a href='index.php'>View Users</a>";
