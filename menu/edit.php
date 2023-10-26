@@ -70,7 +70,15 @@ while($user_data = mysqli_fetch_array($result))
             </tr>
             <tr> 
                 <td>Penjual</td>
-                <td><input type="text" name="Penjual" value=<?php echo $stok;?>></td>
+                <td><select name="id_penjual"> 
+                    <?php 
+                    include_once("../config.php");
+                    $penjual = mysqli_query($mysqli,"SELECT * FROM penjual ORDER BY id_penjual DESC");
+                    while($data = mysqli_fetch_array($penjual)) {
+                        echo '<option value="'.$data['id_penjual'].'">'.$data['nama'].'</option>';
+                    }
+                    ?>
+            </select>
             </tr>
             <tr>
                 <td><input type="hidden" name="id" value=<?php echo $_GET['id_menu'];?>></td>

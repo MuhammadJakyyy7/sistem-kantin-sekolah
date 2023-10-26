@@ -46,15 +46,7 @@ while($user_data = mysqli_fetch_array($result))
         <table border="0">
             <tr> 
                 <td>id_penjual</td>
-                <td><select name="id_penjual">
-                    <?php 
-                    include_once("config.php");
-                    $penjual = mysqli_fetch_array($mysqli, "SELECT * FROM penjual ORDER BY id_penjual DESC");
-
-                    while($data = mysqli_fetch_array($penjual)){
-                        $selected = $id_penjual==$data['id'] 
-                    }
-                    ?>
+                <td> <input type="text" name="id_penjual" value=<?php echo $id;?>></td>
                 </td>
             </tr>
             <tr> 
