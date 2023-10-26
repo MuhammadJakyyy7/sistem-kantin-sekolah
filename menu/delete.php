@@ -3,10 +3,10 @@
 include_once("config.php");
  
 // Get id from URL to delete that user
-$id = $_GET['id_penjual'];
+$id = $_GET['id_menu'];
  
 // Delete user row from table based on given id
-$result = mysqli_query($mysqli, "DELETE FROM penjual WHERE id_penjual=$id");
+$result = mysqli_query($mysqli, "DELETE FROM menu WHERE id_menu=$id");
  
 // After delete redirect to Home, so that latest user list will be displayed.
 header("Location:index.php");

@@ -17,16 +17,19 @@ $result = mysqli_query($mysqli, "SELECT * FROM penjual ORDER BY id_penjual DESC"
     <table width='80%' border=1>
  
     <tr>
-        <th>Name</th> <th>id_penjual</th> <th>Alamat</th> <th>No_Telp</th>
+        <th>id_penjual</th> 
+        <th>Nama</th>
+
+        <th>No_Telp</th>
+        <th>Update</th>
     </tr>
     <?php  
     while($user_data = mysqli_fetch_array($result)) {         
         echo "<tr>";
-        echo "<td>".$user_data['Name']."</td>";
         echo "<td>".$user_data['id_penjual']."</td>";
-        echo "<td>".$user_data['Alamat']."</td>";   
-        echo "<td>".$user_data['No_Telp']."</td>";     
-        echo "<td><a href='edit.php?id=$user_data[id_penjual]'>Edit</a> | <a href='delete.php?id=$user_data[id_penjual]'>Delete</a></td></tr>";        
+        echo "<td>".$user_data['nama']."</td>";
+        echo "<td>".$user_data['no_telp']."</td>";    
+        echo "<td><a href='edit.php?id_penjual=$user_data[id_penjual]'>Edit</a> | <a href='delete.php?id_penjual=$user_data[id_penjual]'>Delete</a></td></tr>";        
     }
     ?>
     </table>
