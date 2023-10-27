@@ -36,9 +36,9 @@
                 <td><input type="text" name="Stok"></td>
             </tr>
             <tr> 
-                <td>Penjual</td>
+                <td>id_Penjual</td>
                 <td>
-                <select name="Penjual">
+                <select name="id_penjual">
                 <?php
                 include_once("config.php");
                 $penjual = mysqli_query($mysqli, "SELECT * FROM penjual ORDER BY id_penjual");
@@ -65,14 +65,14 @@
         $harga = $_POST['Harga'];
         $nama = $_POST['Nama'];
         $stok = $_POST['Stok'];
-        $penjual = $_POST['Penjual'];
+        $id_penjual = $_POST['id_penjual'];
         
         
         // include database connection file
         include_once("config.php");
                 
         // Insert user data into table
-        $result = mysqli_query($mysqli, "INSERT INTO menu(id_Menu,Jenis,Harga,Nama,Stok,Penjual) VALUES('$id','$jenis','$harga','$nama','$stok','$penjual')");
+        $result = mysqli_query($mysqli, "INSERT INTO menu(id_menu,Jenis,Harga,Nama,Stok,id_penjual) VALUES('$id','$jenis','$harga','$nama','$stok','$id_penjual')");
         
         // Show message when user added
         echo "User added successfully. <a href='index.php'>View menu</a>";

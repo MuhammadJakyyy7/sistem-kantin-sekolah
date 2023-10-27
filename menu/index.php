@@ -25,7 +25,7 @@ ORDER BY id_menu DESC");
         <th>Harga</th>
         <th>Nama</th>
         <th>Stok</th>
-        <th>Penjual</th>
+        <th>Nama</th>
         <th>Update</th>
     </tr>
     <?php  
